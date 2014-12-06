@@ -10,7 +10,7 @@
  * @subpackage Upload
  */
 $plupload = 1;
-require_once('sys.includes.php');
+require_once('../sys.includes.php');
 
 $active_nav = 'files';
 
@@ -20,7 +20,7 @@ $allowed_levels = array(9,8,7);
 if (CLIENTS_CAN_UPLOAD == 1) {
 	$allowed_levels[] = 0;
 }
-include('hashtag/header.php');
+include('header.php');
 
 $database->MySQLDB();
 ?>
@@ -166,24 +166,19 @@ while($row = mysql_fetch_array($sql)) {
 			
 				
 				$this_upload = new PSend_Upload_File();
-				//need to do a better check to make sure file name is unique
 				if (!in_array($file,$urls_db_files)) {
-					$file = $this_upload->safe_rename($hashtag . '_' . $file);
+					$file = $this_upload->safe_rename($file);
 				}
-				
-				
-				//get a unique file name
-				
 				$location = $work_folder. $file;
+
+				
+				if(file_exists($location)) {
 				
 				
-				if(file_exists($location)) {//if file exists in temporary folder
-				
-					
 				/**
 					 * If the file isn't already on the database, rename/chmod.
 					 */
-					if (!in_array($file,$urls_db_files)) {
+					if (!in_array($file['file'],$urls_db_files)) {
 						$move_arguments = array(
 												'uploaded_name' => $location,
 												'filename' => $file
@@ -193,8 +188,6 @@ while($row = mysql_fetch_array($sql)) {
 					else {
 						$new_filename = $file;
 					}
-					
-					
 					if (!empty($new_filename)) {
 						
 						$delete_key = array_search($file, $uploaded_files);					
@@ -229,18 +222,44 @@ while($row = mysql_fetch_array($sql)) {
 						
 						
 						
-						
+						if (!in_array($new_filename,$urls_db_files)) {
 							$add_arguments['add_to_db'] = true;
-						
+						}
 
 						/**
 						 * 1- Add the file to the database
 						 */
 						
 						$process_file = $this_upload->upload_add_to_database($add_arguments);
+						if($process_file['database'] == true) {
+							//$add_arguments['new_file_id'] = $process_file['new_file_id'];
+							//$add_arguments['all_users'] = $users;
+							//$add_arguments['all_groups'] = $groups;
+							/**
+							 * 2- Add the assignments to the database
+							 */
+							//$process_assignment = $this_upload->upload_add_assignment($add_arguments);
+							
+							
+							/**
+							 * 4- Mark is as correctly uploaded / assigned
+							
+							$upload_finish[$n] = array(
+													'file' => $file['file'],
+													'name' => $file['name'],
+													'description' => $file['description'],
+													'new_file_id' => $process_file['new_file_id']
+												);
+							if (!empty($file['hidden'])) {
+								$upload_finish[$n]['hidden'] = $file['hidden'];
+							}
+							 */
+						}
 					}
 				}
-				
+				else{
+			
+				}
 				
 				
 				}
@@ -356,7 +375,7 @@ while($row = mysql_fetch_array($sql)) {
 						alert("Hashtag " +  document.getElementById('hashtag2').value + " is not available");
 					  }
 					  else{
-					  
+					  alert("'" + available.trim() + "'");
 					  }
 
 
