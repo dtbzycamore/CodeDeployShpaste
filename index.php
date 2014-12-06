@@ -276,7 +276,7 @@ while($row = mysql_fetch_array($sql)) {
 	?>
 			<p>
 				<?php
-					_e('Click on Add files to select all the files that you want to upload, and then click Upload Files.  Remember that the maximum allowed file size (in mb.) is ','cftp_admin');
+					_e('Click on Add files to select all the files that you want to upload, and then click Upload Files.  Remember that the maximum allowed file size (in mb.) is: ','cftp_admin');
 					echo '<strong>'.MAX_FILESIZE.'</strong>.';
 				?>
 			</p>
