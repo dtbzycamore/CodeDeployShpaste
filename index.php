@@ -153,7 +153,8 @@ while($row = mysql_fetch_array($sql)) {
 		
 		$n = 0;
 		$hashtag =  $_POST['hashtag'];//"hashtagtest";
-
+		print_r($_POST);
+		
 		foreach ($_POST['finished_files'] as $file) {
 			$n++;
 				
