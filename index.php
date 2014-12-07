@@ -168,7 +168,7 @@ while($row = mysql_fetch_array($sql)) {
 				$this_upload = new PSend_Upload_File();
 				//need to do a better check to make sure file name is unique
 				if (!in_array($file,$urls_db_files)) {
-					$file = $this_upload->safe_rename($hashtag . '_' . $file);
+					$file = $this_upload->safe_rename( $file);
 				}
 				
 				
