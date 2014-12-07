@@ -354,18 +354,18 @@ while($row = mysql_fetch_array($sql)) {
 									$('form')[0].submit();
 								}
 							});
-								
+								alert("here");
 							uploader.start();
 
 							$("#btn-submit").hide();
 							$(".message_uploading").fadeIn();
-
+							alert("here2");
 							uploader.bind('FileUploaded', function (up, file, info) {
 								var obj = JSON.parse(info.response);
 								var new_file_field = '<input type="hidden" name="finished_files[]" value="'+obj.NewFileName+'" />'
 								$('form').append(new_file_field);
 							});
-	
+			alert("here3");
 							return false;
 						} else {
 							alert('<?php _e("You must select at least one file to upload.",'cftp_admin'); ?>');
