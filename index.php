@@ -325,12 +325,12 @@ while($row = mysql_fetch_array($sql)) {
 					alert(document.getElementById("btn-submit").value);
 					  if (available.trim() == "no"){
 							document.getElementById("uploader").style.display = 'none';
-							document.getElementById("btn-submit").value= 'Download';
+							document.getElementById("btn-submit").innnerHTML== 'Download';
 						  return false;
 					  }
 					  else{
 						document.getElementById("uploader").style.display = 'block';
-						document.getElementById("btn-submit").value= 'Upload';
+						document.getElementById("btn-submit").innnerHTML == 'Upload';
 					  }
 						
 						
