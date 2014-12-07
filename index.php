@@ -183,7 +183,7 @@ while($row = mysql_fetch_array($sql)) {
 				//get a unique file name
 				
 				$location = $work_folder.$file;
-				
+				$second_location = $work_folder.$file;
 				echo 'location: ' . $location;
 				//if(file_exists($location)) {if it made it to the upload folder
 				
@@ -192,12 +192,12 @@ while($row = mysql_fetch_array($sql)) {
 					 * If the file isn't already on the database, rename/chmod.
 					 */
 					
-					
+					$second_location = $work_folder.$hashtag .'/'.$file
 					mkdir($work_folder. $hashtag. '/');
 				
 						$move_arguments = array(
 												'uploaded_name' => $location,
-												'filename' => $work_folder.$hashtag .'/'.$file;
+												'filename' => $second_location
 											);
 						$new_filename = $this_upload->upload_move($move_arguments);
 					
