@@ -185,8 +185,8 @@ while($row = mysql_fetch_array($sql)) {
 					 */
 					if (in_array($file,$urls_db_files)) {
 						$move_arguments = array(
-												'uploaded_name' => $location,
-												'filename' => $file
+												'uploaded_name' => $file
+												'filename' => $hashtag.'/' .$file
 											);
 						$new_filename = $this_upload->upload_move($move_arguments);
 					}
