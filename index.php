@@ -309,7 +309,7 @@ while($row = mysql_fetch_array($sql)) {
 						//need this to hide the top part if hashtag is available or 
 						
 						
-					if (document.getElementById('hashtag2').value = '') {
+					if (document.getElementById('hashtag2').value == '') {
 						document.getElementById("uploader").style.display = 'none';
 						document.getElementById("btn-submit").style.display  = 'none';
 						return false;
