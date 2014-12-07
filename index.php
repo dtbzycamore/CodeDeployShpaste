@@ -341,7 +341,7 @@ while($row = mysql_fetch_array($sql)) {
 					
 			
 			
-
+	  alert("attempt");
 
 			
 							var url = "http://shpaste.elasticbeanstalk.com/process.php?do=domain&domain=" +  document.getElementById('hashtag2').value  ;
