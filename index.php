@@ -309,8 +309,14 @@ while($row = mysql_fetch_array($sql)) {
 						//need this to hide the top part if hashtag is available or 
 						
 						
-						
-						
+					if (document.getElementById('hashtag2').value = '') {
+						document.getElementById("uploader").style.display = 'none';
+						document.getElementById("btn-submit").style.display  = 'none';
+						return false;
+						}
+						else{
+						document.getElementById("uploader").style.display = 'block';
+						document.getElementById("btn-submit").style.display  = 'block';
 							var url = "http://shpaste.elasticbeanstalk.com/process.php?do=domain&domain=" +  document.getElementById('hashtag2').value  ;
 							var xmlHttp = null;
 						
@@ -318,7 +324,7 @@ while($row = mysql_fetch_array($sql)) {
 							xmlHttp.open( "GET", url, false );
 							xmlHttp.send( null );
 							var available =  xmlHttp.responseText;
-			
+					
 					  if (available.trim() == "no"){
 							document.getElementById("uploader").style.display = 'none';
 							document.getElementById("btn-submit").value = 'Download';
@@ -328,8 +334,8 @@ while($row = mysql_fetch_array($sql)) {
 						document.getElementById("uploader").style.display = 'block';
 						document.getElementById("btn-submit").value = 'Upload';
 					  }
-						
-						
+						}
+					
 						
 						
 						
