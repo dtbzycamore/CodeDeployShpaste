@@ -383,6 +383,7 @@ while($row = mysql_fetch_array($sql)) {
 	
 			
 						if (document.getElementById("btn-submit").value == 'Download'){
+							return false;
 			
 						}
 						else
