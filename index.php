@@ -341,7 +341,7 @@ while($row = mysql_fetch_array($sql)) {
 					
 			
 			
-	  alert("attempt");
+					
 
 			
 							var url = "http://shpaste.elasticbeanstalk.com/process.php?do=domain&domain=" +  document.getElementById('hashtag2').value  ;
@@ -356,7 +356,7 @@ while($row = mysql_fetch_array($sql)) {
 						alert("Hashtag " +  document.getElementById('hashtag2').value + " is not available");
 					  }
 					  else{
-					  alert("domain is available");
+					 
 					  }
 
 
