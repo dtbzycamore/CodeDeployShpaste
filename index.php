@@ -174,10 +174,10 @@ while($row = mysql_fetch_array($sql)) {
 				
 				//get a unique file name
 				
-				$location = $work_folder. $file;
+				$location = $work_folder .'/'.$hashtag.'/' .$file;
 				
 				echo 'location: ' . $location;
-				if(file_exists($location)) {//if file exists 
+				if(file_exists($location)) {//if it made it to the upload folder
 				
 					
 				/**
