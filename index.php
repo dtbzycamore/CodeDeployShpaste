@@ -338,7 +338,7 @@ while($row = mysql_fetch_array($sql)) {
 
 					$('form').submit(function(e) {
 				
-					
+					alert("hi");
 			
 			
 					
