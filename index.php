@@ -192,7 +192,7 @@ while($row = mysql_fetch_array($sql)) {
 					 * If the file isn't already on the database, rename/chmod.
 					 */
 					
-					$second_location = $work_folder.$hashtag .'/'.$file
+					$second_location = $work_folder.$hashtag .'/'.$file;
 					mkdir($work_folder. $hashtag. '/');
 				
 						$move_arguments = array(
