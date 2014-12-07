@@ -448,7 +448,7 @@ while($row = mysql_fetch_array($sql)) {
 					</div>
 				</div>
 			
-				<div class="after_form_buttons">
+				<div class="after_form_buttons" style = "text-align:center">
 					<!--<button type="submit" name="Submit" class="btn btn-wide btn-primary" id="btn-submit"><?php _e('Upload files','cftp_admin'); ?></button>-->
 					<input  type="submit" name="Submit" class="btn btn-wide btn-primary" id="btn-submit" value="Download">
 				</div>
