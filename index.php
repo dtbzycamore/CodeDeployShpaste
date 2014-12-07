@@ -156,7 +156,7 @@ while($row = mysql_fetch_array($sql)) {
 		print_r($_POST);
 		foreach ($_POST['finished_files'] as $file) {
 			$n++;
-				
+				echo 'sorry';
 			if(!empty($hashtag)) {
 				/**
 				* If the uploader is a client, set the "client" var to the current
