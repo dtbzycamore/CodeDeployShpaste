@@ -236,7 +236,7 @@ while($row = mysql_fetch_array($sql)) {
 						/**
 						 * 1- Add the file to the database
 						 */
-						
+						echo 'add to database';
 						$process_file = $this_upload->upload_add_to_database($add_arguments);
 					}
 				}
