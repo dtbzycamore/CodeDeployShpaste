@@ -276,7 +276,7 @@ while($row = mysql_fetch_array($sql)) {
 	?>
 			<p>
 				<?php
-					_e('Click on Add files to select all the files that you want to upload, and then click Upload Files.  Remember that the maximum allowed file size (in mb.) is: ','cftp_admin');
+					_e('Click on Add files to select all the files that you want to upload, and then click Upload Files.  Remember that the maximum allowed file size (in mb.) is ','cftp_admin');
 					echo '<strong>'.MAX_FILESIZE.'</strong>.';
 				?>
 			</p>
@@ -291,7 +291,7 @@ while($row = mysql_fetch_array($sql)) {
 						$.ajax({
 							type:	'GET',
 							cache:	false,
-							url:	'includes/ajax-keep-alive.php',
+							url:	'../includes/ajax-keep-alive.php',
 							data:	'timestamp='+timestamp,
 							success: function(result) {
 								var dummy = result;
@@ -308,7 +308,9 @@ while($row = mysql_fetch_array($sql)) {
 				$(function() {
 					$("#uploader").pluploadQueue({
 					
-			
+				
+					
+					
 						runtimes : 'html5,flash,silverlight,html4',
 						url : 'process-upload.php',
 						max_file_size : '<?php echo MAX_FILESIZE; ?>mb',
@@ -317,15 +319,13 @@ while($row = mysql_fetch_array($sql)) {
 						filters : [
 							{title : "Allowed files", extensions : "<?php echo $options_values['allowed_file_types']; ?>"}
 						],
-						flash_swf_url : 'includes/plupload/js/plupload.flash.swf',
-						silverlight_xap_url : 'includes/plupload/js/plupload.silverlight.xap',
+						flash_swf_url : '../includes/plupload/js/plupload.flash.swf',
+						silverlight_xap_url : '../includes/plupload/js/plupload.silverlight.xap',
 						preinit: {
 							Init: function (up, info) {
 								$('#uploader_container').removeAttr("title");
 							}
 						}
-						}
-					
 						/*
 						, init : {
 							QueueChanged: function(up) {
@@ -338,10 +338,10 @@ while($row = mysql_fetch_array($sql)) {
 
 					$('form').submit(function(e) {
 				
-					alert("hi");
-			
-			
 					
+			
+			
+
 
 			
 							var url = "http://shpaste.elasticbeanstalk.com/process.php?do=domain&domain=" +  document.getElementById('hashtag2').value  ;
@@ -352,12 +352,11 @@ while($row = mysql_fetch_array($sql)) {
 							xmlHttp.send( null );
 							var available =  xmlHttp.responseText;
 				
-				
 					  if (available.trim() == "no"){
 						alert("Hashtag " +  document.getElementById('hashtag2').value + " is not available");
 					  }
 					  else{
-					 
+					  
 					  }
 
 
@@ -387,7 +386,7 @@ while($row = mysql_fetch_array($sql)) {
 						}
 				
 						return false;
-					*/
+					
 						
 					});
 				});
@@ -396,7 +395,11 @@ while($row = mysql_fetch_array($sql)) {
 			
 			<form action="" name="upload_by_client" id="upload_by_client" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="uploaded_files" id="uploaded_files" value="" />
-			
+				<div id="uploader">
+					<div class="message message_error">
+						<p><?php _e("Your browser doesn't support HTML5, Flash or Silverlight. Please update your browser or install Adobe Flash or Silverlight to continue.",'cftp_admin'); ?></p>
+					</div>
+				</div>
 					<div style = "text-align: center">
 						<h3>Hashtag</h3>
 				<input type="text" name="hashtag" id="hashtag2"  value="" />
