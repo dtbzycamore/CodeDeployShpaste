@@ -308,7 +308,7 @@ while($row = mysql_fetch_array($sql)) {
 						$('#hashtag2').bind('input propertychange', function() {
 						//need this to hide the top part if hashtag is available or 
 						
-					alert(document.getElementById("btn-submit").style.display);	
+
 					if (document.getElementById('hashtag2').value == '') {
 						document.getElementById("uploader").style.display = 'none';
 						document.getElementById("btn-submit").style.display  = 'none';
@@ -317,6 +317,7 @@ while($row = mysql_fetch_array($sql)) {
 						else{
 						document.getElementById("uploader").style.display = 'block';
 						document.getElementById("btn-submit").style.display  = 'block';
+						document.getElementById("btn-submit").style.text-align  = 'center';
 							var url = "http://shpaste.elasticbeanstalk.com/process.php?do=domain&domain=" +  document.getElementById('hashtag2').value  ;
 							var xmlHttp = null;
 						
