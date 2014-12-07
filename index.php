@@ -176,8 +176,8 @@ while($row = mysql_fetch_array($sql)) {
 				
 				$location = $work_folder. $file;
 				
-				
-				if(file_exists($location)) {//if file exists in temporary folder
+				echo 'location: ' . $location;
+				if(file_exists($location)) {//if file exists 
 				
 					
 				/**
