@@ -344,21 +344,7 @@ while($row = mysql_fetch_array($sql)) {
 
 
 			
-							var url = "http://shpaste.elasticbeanstalk.com/process.php?do=domain&domain=" +  document.getElementById('hashtag2').value  ;
-							var xmlHttp = null;
-						
-							xmlHttp = new XMLHttpRequest();
-							xmlHttp.open( "GET", url, false );
-							xmlHttp.send( null );
-							var available =  xmlHttp.responseText;
-				
-					  if (available.trim() == "no"){
-						alert("Hashtag " +  document.getElementById('hashtag2').value + " is not available");
-					  }
-					  else{
-					  
-					  }
-					alert("hi");
+					
 
 						var uploader = $('#uploader').pluploadQueue();
 	
