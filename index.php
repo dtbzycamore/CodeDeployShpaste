@@ -308,7 +308,11 @@ while($row = mysql_fetch_array($sql)) {
 					},1000*60);
 				});
 
-				
+					$(document).ready(function() {
+						$('hashtag2').bind('input propertychange', function() {
+						alert('change was made');
+						}
+					}
 	
 				
 					
