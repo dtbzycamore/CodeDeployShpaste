@@ -194,7 +194,7 @@ while($row = mysql_fetch_array($sql)) {
 						$new_filename = $file;
 					}
 					
-					
+					echo 'filename: ' . $new_filename;
 					if (!empty($new_filename)) {
 						
 						$delete_key = array_search($file, $uploaded_files);					
