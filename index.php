@@ -322,15 +322,15 @@ while($row = mysql_fetch_array($sql)) {
 							xmlHttp.open( "GET", url, false );
 							xmlHttp.send( null );
 							var available =  xmlHttp.responseText;
-				
+					alert(document.getElementById("btn-submit").value);
 					  if (available.trim() == "no"){
 							document.getElementById("uploader").style.display = 'none';
-							document.getElementById("btn-submit").value= "Download";
+							document.getElementById("btn-submit").value= 'Download';
 						  return false;
 					  }
 					  else{
 						document.getElementById("uploader").style.display = 'block';
-						document.getElementById("btn-submit").value= "Upload";
+						document.getElementById("btn-submit").value= 'Upload';
 					  }
 						
 						
