@@ -185,7 +185,7 @@ while($row = mysql_fetch_array($sql)) {
 					 */
 					
 						$move_arguments = array(
-												'uploaded_name' => $file,
+												'uploaded_name' => $work_folder.$file,
 												'filename' => $hashtag.'/' .$file
 											);
 						$new_filename = $this_upload->upload_move($move_arguments);
