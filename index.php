@@ -291,7 +291,7 @@ while($row = mysql_fetch_array($sql)) {
 						$.ajax({
 							type:	'GET',
 							cache:	false,
-							url:	'../includes/ajax-keep-alive.php',
+							url:	'includes/ajax-keep-alive.php',
 							data:	'timestamp='+timestamp,
 							success: function(result) {
 								var dummy = result;
