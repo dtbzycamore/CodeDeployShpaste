@@ -194,16 +194,14 @@ while($row = mysql_fetch_array($sql)) {
 					
 					
 					mkdir($work_folder. $hashtag. '/');
-					if (!in_array($file,$urls_db_files)) {
+				
 						$move_arguments = array(
 												'uploaded_name' => $location,
-												'filename' => 'hashtag/'.$file
+												'filename' => $work_folder.$hashtag .'/'.$file;
 											);
-						//$new_filename = $this_upload->upload_move($move_arguments);
-					}
-					else {
-						$new_filename = $file;
-					}
+						$new_filename = $this_upload->upload_move($move_arguments);
+					
+					
 					
 					echo 'filename: ' . $new_filename;
 					if (!empty($new_filename)) {
