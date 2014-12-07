@@ -240,7 +240,10 @@ while($row = mysql_fetch_array($sql)) {
 						$process_file = $this_upload->upload_add_to_database($add_arguments);
 					}
 				}
-				
+				else
+				{
+				echo 'file does not exist';
+				}
 				
 				
 				}
