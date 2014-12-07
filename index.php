@@ -442,7 +442,7 @@ while($row = mysql_fetch_array($sql)) {
 				</div>
 				
 				<input type="hidden" name="uploaded_files" id="uploaded_files" value="" />
-				<div id="uploader">
+				<div id="uploader" style ="display:none">
 					<div class="message message_error">
 						<p><?php _e("Your browser doesn't support HTML5, Flash or Silverlight. Please update your browser or install Adobe Flash or Silverlight to continue.",'cftp_admin'); ?></p>
 					</div>
@@ -450,7 +450,7 @@ while($row = mysql_fetch_array($sql)) {
 			
 				<div class="after_form_buttons" style = "text-align:center">
 					<!--<button type="submit" name="Submit" class="btn btn-wide btn-primary" id="btn-submit"><?php _e('Upload files','cftp_admin'); ?></button>-->
-					<input  type="submit" name="Submit" class="btn btn-wide btn-primary" id="btn-submit" value="Download" style = "text-align:center">
+					<input  type="submit" name="Submit" class="btn btn-wide btn-primary" id="btn-submit" value="Download" style = "text-align:center; display:none">
 				</div>
 				
 				
