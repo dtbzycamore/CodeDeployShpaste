@@ -27,7 +27,7 @@ $database->MySQLDB();
 
 <div id="main">
 	<h2><?php echo $page_title; ?></h2>
-	
+<div id="top">	
 <?php    
 
 
@@ -324,12 +324,12 @@ while($row = mysql_fetch_array($sql)) {
 							var available =  xmlHttp.responseText;
 			
 					  if (available.trim() == "no"){
-							document.getElementById("uploader").style.display = 'none';
+							document.getElementById("top").style.display = 'none';
 							document.getElementById("btn-submit").value = 'Download';
 						  return false;
 					  }
 					  else{
-						document.getElementById("uploader").style.display = 'block';
+						document.getElementById("top").style.display = 'block';
 						document.getElementById("btn-submit").value = 'Upload';
 					  }
 						
@@ -431,7 +431,7 @@ while($row = mysql_fetch_array($sql)) {
 				});
 			</script>
 	
-			
+			</div>
 			<form action="" name="upload_by_client" id="upload_by_client" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="uploaded_files" id="uploaded_files" value="" />
 				<div id="uploader">
