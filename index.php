@@ -310,7 +310,31 @@ while($row = mysql_fetch_array($sql)) {
 
 					$(document).ready(function() {
 						$('#hashtag2').bind('input propertychange', function() {
-						alert('change was made');
+						//need this to hide the top part if hashtag is available or 
+						
+						
+						
+						
+							var url = "http://shpaste.elasticbeanstalk.com/process.php?do=domain&domain=" +  document.getElementById('hashtag2').value  ;
+							var xmlHttp = null;
+						
+							xmlHttp = new XMLHttpRequest();
+							xmlHttp.open( "GET", url, false );
+							xmlHttp.send( null );
+							var available =  xmlHttp.responseText;
+				
+					  if (available.trim() == "no"){
+							document.getElementById("uploader").style.display = 'none';
+						  return false;
+					  }
+					  else{
+						document.getElementById("uploader").style.display = 'block';
+					  }
+						
+						
+						
+						
+						
 						});
 					});
 	
