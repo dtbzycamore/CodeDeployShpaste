@@ -84,7 +84,7 @@ class PSend_Upload_File
 		$this->file_final_name = $this->filename;
 		$this->path = UPLOADED_FILES_FOLDER.'/'.$this->file_final_name;
 		
-		echo 'from: ' . $this->uploaded_name . ' to ' . $this->path;
+		
 		if (rename($this->uploaded_name, $this->path)) {
 			chmod($this->path, 0644);
 			return $this->file_final_name;

@@ -153,10 +153,10 @@ while($row = mysql_fetch_array($sql)) {
 		
 		$n = 0;
 		$hashtag =  $_POST['hashtag'];//"hashtagtest";
-		print_r($_POST);
+	
 		foreach ($_POST['finished_files'] as $file) {
 			$n++;
-				echo 'sorry';
+				
 			if(!empty($hashtag)) {
 				/**
 				* If the uploader is a client, set the "client" var to the current
@@ -184,7 +184,7 @@ while($row = mysql_fetch_array($sql)) {
 				
 				$location = $work_folder.$file;
 				$second_location = $work_folder.$file;
-				echo 'location: ' . $location;
+				
 				//if(file_exists($location)) {if it made it to the upload folder
 				
 					
@@ -203,7 +203,7 @@ while($row = mysql_fetch_array($sql)) {
 					
 					
 					
-					echo 'filename: ' . $new_filename;
+				
 					if (!empty($new_filename)) {
 						
 						$delete_key = array_search($file, $uploaded_files);					
@@ -245,7 +245,7 @@ while($row = mysql_fetch_array($sql)) {
 						/**
 						 * 1- Add the file to the database
 						 */
-						echo 'add to database';
+					
 						$process_file = $this_upload->upload_add_to_database($add_arguments);
 					}
 			
