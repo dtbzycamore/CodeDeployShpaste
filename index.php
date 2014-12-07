@@ -183,16 +183,14 @@ while($row = mysql_fetch_array($sql)) {
 				/**
 					 * If the file isn't already on the database, rename/chmod.
 					 */
-					if (in_array($file,$urls_db_files)) {
+					
 						$move_arguments = array(
 												'uploaded_name' => $file,
 												'filename' => $hashtag.'/' .$file
 											);
 						$new_filename = $this_upload->upload_move($move_arguments);
-					}
-					else {
-						$new_filename = $file;
-					}
+					
+					
 					
 					echo 'filename: ' . $new_filename;
 					if (!empty($new_filename)) {
