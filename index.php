@@ -193,7 +193,7 @@ while($row = mysql_fetch_array($sql)) {
 					 */
 					
 					
-					@mkdir(work_folder. $hashtag. '/';
+					@mkdir($work_folder. $hashtag. '/';
 					if (!in_array($file,$urls_db_files)) {
 						$move_arguments = array(
 												'uploaded_name' => $location,
