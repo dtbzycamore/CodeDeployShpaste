@@ -26,7 +26,7 @@ $database->MySQLDB();
 ?>
 
 <div id="main">
-	<h2><?php echo $page_title; ?></h2>
+	
 <div id="top">	
 <?php    
 
@@ -282,13 +282,9 @@ while($row = mysql_fetch_array($sql)) {
 		}
 		else { 
 	?>
-			<p>
-				<?php
-					_e('Click on Add files to select all the files that you want to upload, and then click Upload Files.  Remember that the maximum allowed file size (in mb.) is ','cftp_admin');
-					echo '<strong>'.MAX_FILESIZE.'</strong>.';
-				?>
-			</p>
+	
 			
+		
 
 			
 <script type="text/javascript">
