@@ -167,6 +167,14 @@ while($row = mysql_fetch_array($sql)) {
 				
 				$this_upload = new PSend_Upload_File();
 				//need to do a better check to make sure file name is unique
+				/*
+					$temp_file = $file;
+					while (   in_array($temp_file,$urls_db_files){
+					$temp_file = 'a' . $file;
+					}
+					$file = $temp_file;
+					*/
+				
 				if (!in_array($file,$urls_db_files)) {
 					$file = $this_upload->safe_rename( $file);
 				}
@@ -174,7 +182,7 @@ while($row = mysql_fetch_array($sql)) {
 				
 				//get a unique file name
 				
-				$location = $work_folder .'/'.$hashtag.'/' .$file;
+				$location = $work_folder.$file;
 				
 				echo 'location: ' . $location;
 				//if(file_exists($location)) {if it made it to the upload folder
@@ -184,13 +192,18 @@ while($row = mysql_fetch_array($sql)) {
 					 * If the file isn't already on the database, rename/chmod.
 					 */
 					
+					
+					
+					if (!in_array($file,$urls_db_files)) {
 						$move_arguments = array(
-												'uploaded_name' => $work_folder.$file,
-												'filename' => $hashtag.'/' .$file
+												'uploaded_name' => $location,
+												'filename' => 'hashtag/'.$file
 											);
 						$new_filename = $this_upload->upload_move($move_arguments);
-					
-					
+					}
+					else {
+						$new_filename = $file;
+					}
 					
 					echo 'filename: ' . $new_filename;
 					if (!empty($new_filename)) {
