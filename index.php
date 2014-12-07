@@ -309,7 +309,7 @@ while($row = mysql_fetch_array($sql)) {
 				});
 
 					$(document).ready(function() {
-						$('hashtag2').bind('input propertychange', function() {
+						$('#hashtag2').bind('input propertychange', function() {
 						alert('change was made');
 						});
 					});
