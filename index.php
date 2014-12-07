@@ -358,7 +358,7 @@ while($row = mysql_fetch_array($sql)) {
 					  else{
 					 
 					  }
-
+/*
 
 						var uploader = $('#uploader').pluploadQueue();
 	
@@ -386,7 +386,7 @@ while($row = mysql_fetch_array($sql)) {
 						}
 				
 						return false;
-					
+					*/
 						
 					});
 				});
