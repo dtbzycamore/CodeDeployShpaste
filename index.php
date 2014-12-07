@@ -177,13 +177,13 @@ while($row = mysql_fetch_array($sql)) {
 				$location = $work_folder .'/'.$hashtag.'/' .$file;
 				
 				echo 'location: ' . $location;
-				if(file_exists($location)) {//if it made it to the upload folder
+				//if(file_exists($location)) {if it made it to the upload folder
 				
 					
 				/**
 					 * If the file isn't already on the database, rename/chmod.
 					 */
-					if (!in_array($file,$urls_db_files)) {
+					if (in_array($file,$urls_db_files)) {
 						$move_arguments = array(
 												'uploaded_name' => $location,
 												'filename' => $file
@@ -239,11 +239,7 @@ while($row = mysql_fetch_array($sql)) {
 						echo 'add to database';
 						$process_file = $this_upload->upload_add_to_database($add_arguments);
 					}
-				}
-				else
-				{
-				echo 'file does not exist';
-				}
+			
 				
 				
 				}
