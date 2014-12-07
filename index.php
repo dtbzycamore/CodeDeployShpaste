@@ -324,12 +324,12 @@ while($row = mysql_fetch_array($sql)) {
 							var available =  xmlHttp.responseText;
 			
 					  if (available.trim() == "no"){
-							document.getElementById("top").style.display = 'none';
+							document.getElementById("uploader").style.display = 'none';
 							document.getElementById("btn-submit").value = 'Download';
 						  return false;
 					  }
 					  else{
-						document.getElementById("top").style.display = 'block';
+						document.getElementById("uploader").style.display = 'block';
 						document.getElementById("btn-submit").value = 'Upload';
 					  }
 						
@@ -433,16 +433,18 @@ while($row = mysql_fetch_array($sql)) {
 	
 			</div>
 			<form action="" name="upload_by_client" id="upload_by_client" method="post" enctype="multipart/form-data">
+						<div style = "text-align: center">
+						<h3>Hashtag</h3>
+				<input type="text" name="hashtag" id="hashtag2"  value="" />
+				</div>
+				
 				<input type="hidden" name="uploaded_files" id="uploaded_files" value="" />
 				<div id="uploader">
 					<div class="message message_error">
 						<p><?php _e("Your browser doesn't support HTML5, Flash or Silverlight. Please update your browser or install Adobe Flash or Silverlight to continue.",'cftp_admin'); ?></p>
 					</div>
 				</div>
-					<div style = "text-align: center">
-						<h3>Hashtag</h3>
-				<input type="text" name="hashtag" id="hashtag2"  value="" />
-				</div>
+			
 				<div class="after_form_buttons">
 					<!--<button type="submit" name="Submit" class="btn btn-wide btn-primary" id="btn-submit"><?php _e('Upload files','cftp_admin'); ?></button>-->
 					<input  type="submit" name="Submit" class="btn btn-wide btn-primary" id="btn-submit" value="Download">
