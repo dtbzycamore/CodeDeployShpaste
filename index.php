@@ -316,7 +316,7 @@ while($row = mysql_fetch_array($sql)) {
 						}
 						else{
 						document.getElementById("uploader").style.display = 'block';
-						document.getElementById("btn-submit").style.display  = 'inherit';
+						document.getElementById("btn-submit").removeAttr( 'style' );
 						
 							var url = "http://shpaste.elasticbeanstalk.com/process.php?do=domain&domain=" +  document.getElementById('hashtag2').value  ;
 							var xmlHttp = null;
