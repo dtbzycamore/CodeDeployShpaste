@@ -308,9 +308,7 @@ while($row = mysql_fetch_array($sql)) {
 				$(function() {
 					$("#uploader").pluploadQueue({
 					
-				alert("working");
-					
-					try{
+			
 						runtimes : 'html5,flash,silverlight,html4',
 						url : 'process-upload.php',
 						max_file_size : '<?php echo MAX_FILESIZE; ?>mb',
@@ -327,9 +325,7 @@ while($row = mysql_fetch_array($sql)) {
 							}
 						}
 						}
-					catch(err) {
-					document.getElementById("demo").innerHTML = err.message;
-					}
+					
 						/*
 						, init : {
 							QueueChanged: function(up) {
@@ -360,7 +356,7 @@ while($row = mysql_fetch_array($sql)) {
 						alert("Hashtag " +  document.getElementById('hashtag2').value + " is not available");
 					  }
 					  else{
-					  
+					  alert("domain is available");
 					  }
 
 
