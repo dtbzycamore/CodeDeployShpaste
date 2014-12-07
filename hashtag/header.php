@@ -21,7 +21,7 @@
 
 	<link href='<?php echo PROTOCOL; ?>://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 	<link href='<?php echo PROTOCOL; ?>://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-<script src="jquery-1.11.1.min.js"></script>
+
 	<?php
 		/**
 		 * Load a different css file when called from the admin, or
