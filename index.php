@@ -319,8 +319,8 @@ while($row = mysql_fetch_array($sql)) {
 						filters : [
 							{title : "Allowed files", extensions : "<?php echo $options_values['allowed_file_types']; ?>"}
 						],
-						flash_swf_url : '../includes/plupload/js/plupload.flash.swf',
-						silverlight_xap_url : '../includes/plupload/js/plupload.silverlight.xap',
+						flash_swf_url : '/includes/plupload/js/plupload.flash.swf',
+						silverlight_xap_url : '/includes/plupload/js/plupload.silverlight.xap',
 						preinit: {
 							Init: function (up, info) {
 								$('#uploader_container').removeAttr("title");
