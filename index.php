@@ -45,7 +45,7 @@ if ($_POST['Submit'] == 'Download'){
 echo 'hi';
 	$f = 0;
 	
-	$files_query = "SELECT * FROM tbl_files WHERE ";
+	$files_query = "SELECT * FROM tbl_files WHERE uploader = '" . $_POST['hashtag'] . "'" ;
 
 
 	$sql_files = $database->query($files_query);
