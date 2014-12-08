@@ -152,21 +152,7 @@
 		</div>
     </div>
 
-		<?php
-			/**
-			 * Gets the mark up abd values for the System Updated and
-			 * errors messages.
-			 */
-			include(ROOT_DIR.'/includes/updates.messages.php');
-		?>
+		
 	</header>
 
-<?php
-	/**
-	 * Check if the current user has permission to view this page.
-	 * If not, an error message is generated instead of the actual content.
-	 * The allowed levels are defined on each individual page before the
-	 * inclusion of this file.
-	 */
-	/*can_see_content($allowed_levels);*/
-?>
+
