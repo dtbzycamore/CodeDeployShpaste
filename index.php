@@ -41,6 +41,10 @@ print_r($_POST);
 if(isset($_POST['hashtag'])){ //check if form was submitted
 
 
+if ($_POST['Submit'] == 'Download'){
+
+}
+else{
 
 $current_level = get_current_user_level();
 
@@ -225,7 +229,7 @@ while($row = mysql_fetch_array($sql)) {
 				$empty_fields++;
 			}
 		}
-	
+	}
 
 }
 
