@@ -47,13 +47,6 @@ echo 'hi';
 	
 	$files_query = "SELECT * FROM tbl_files WHERE ";
 
-	/** Add the search terms */	
-	if(isset($_POST['search']) && !empty($_POST['search'])) {
-	
-		$search_terms		= $_POST['search'];
-		$files_query		.=  "uploader =  '$search_terms'";
-		$no_results_error	= 'search';
-	}
 
 	$sql_files = $database->query($files_query);
 	while($data = mysql_fetch_array($sql_files)) {
@@ -88,20 +81,9 @@ echo 'hi';
 	}
 	
 	
-	
+	echo count($my_files);
 	if (count($my_files) >= 2 ) {
-	//can download in zipped folder
-	/*
-		$.get('<?php echo BASE_URI; ?>process.php', { do:"zip_download", client:"<?php echo CURRENT_USER_USERNAME; ?>", files:checkboxes },
-							function(data) {
-								$('.modal_content').append("<iframe src='<?php echo BASE_URI; ?>process-zip-download.php?file="+data+"'></iframe>");
-								// Close the modal window
-								//remove_modal();
-							}
-						);
 	
-	
-	*/
 	
 	
 	
@@ -137,7 +119,7 @@ foreach ($my_files as $file){
 
 $zip->close();
 
-if ($added_files > 0) {
+if ($added_files >= 2) {
 
 	/** Record the action log */
 	$new_log_action = new LogActions();
@@ -188,20 +170,6 @@ if ($added_files > 0) {
 	
 }
 		
-	
-		
-				
-	
-
-					
-					
-					
-		
-		
-	
-	
-	
-
 	
 	//get link
 	}
