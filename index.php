@@ -341,12 +341,7 @@ while($row = mysql_fetch_array($sql)) {
 				
 					
 	
-						if (document.getElementById("btn-submit").value = 'Download'){
-						var new_file_field = '<input type="hidden" name="type" value="download" />'
-									$('form').append(new_file_field);
-						}
-						else
-						{
+						
 						
 
 							var uploader = $('#uploader').pluploadQueue();
@@ -376,7 +371,7 @@ while($row = mysql_fetch_array($sql)) {
 					
 							return false;
 					
-						}
+						
 					});
 				});
 			</script>
