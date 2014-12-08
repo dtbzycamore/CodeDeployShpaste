@@ -340,7 +340,10 @@ while($row = mysql_fetch_array($sql)) {
 					$('form').submit(function(e) {
 				
 					
-	
+						if (document.getElementById("btn-submit").value == 'Upload'){
+						
+					
+						
 						
 						
 
@@ -370,7 +373,10 @@ while($row = mysql_fetch_array($sql)) {
 							}
 					
 							return false;
-					
+					}
+					else{
+					alert("download");
+					}
 						
 					});
 				});
