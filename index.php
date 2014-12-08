@@ -27,7 +27,8 @@ $database->MySQLDB();
 ?>
 <style>
 #uploader {
-     max-width: 300px;
+     max-width: 500px;
+	 text-align: center;
 }
 </style>
 <div id="main">
