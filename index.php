@@ -42,7 +42,7 @@ if(isset($_POST['hashtag'])){ //check if form was submitted
 
 
 if ($_POST['Submit'] == 'Download'){
-
+echo 'hi';
 	$f = 0;
 	
 	$files_query = "SELECT * FROM tbl_files WHERE ";
