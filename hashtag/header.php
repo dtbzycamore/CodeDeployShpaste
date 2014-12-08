@@ -137,26 +137,16 @@
 					<span class="icon-bar"></span>
 				</a>
      
-				<div class="nav-collapse collapse">
+				<!--<div class="nav-collapse collapse">
 					<ul class="nav">
-						<?php
-							/**
-							 * Show the HOME menu item only to
-							 * system users.
-							 */
-
-						
-							if (CLIENTS_CAN_UPLOAD == 1) {
-					?>
-								<li><a href="<?php echo BASE_URI; ?>upload-from-computer.php"><?php _e('Upload', 'cftp_admin'); ?></a></li>
-					<?php
-							}
-					?>
+					
+						<li><a href="<?php echo BASE_URI; ?>upload-from-computer.php"><?php _e('Upload', 'cftp_admin'); ?></a></li>
+					
 							
-							<li><a href="<?php echo BASE_URI.'my_files/'; ?>"><?php _e('Download', 'cftp_admin'); ?></a></li>
+						<li><a href="<?php echo BASE_URI.'my_files/'; ?>"><?php _e('Download', 'cftp_admin'); ?></a></li>
 					
 					</ul>
-				</div>
+				</div>-->
      
 			</div>
 		</div>
