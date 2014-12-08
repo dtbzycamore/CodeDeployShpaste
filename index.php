@@ -22,6 +22,11 @@ if (CLIENTS_CAN_UPLOAD == 1) {
 }
 include('hashtag/header.php');
 
+<style>
+.plupload_content {
+     max-width: 100px;
+}
+</style>
 $database->MySQLDB();
 ?>
 
@@ -31,33 +36,10 @@ $database->MySQLDB();
 <?php    
 
 
-
-
-
-
-
-					
-					
-					
-				
-	
-
-
 if(isset($_POST['hashtag'])){ //check if form was submitted
 
 
 
-
-
-//print_r($_POST);
-
-
-
-
-/**
- * Get the user level to determine if the uploader is a
- * system user or a client.
- */
 $current_level = get_current_user_level();
 
 $work_folder = UPLOADED_FILES_FOLDER;
@@ -242,14 +224,6 @@ while($row = mysql_fetch_array($sql)) {
 			}
 		}
 	
-
-
-
-
-
-
-
-
 
 }
 
