@@ -26,8 +26,8 @@ include('hashtag/header.php');
 $database->MySQLDB();
 ?>
 <style>
-.plupload_content {
-     max-width: 100px;
+#uploader {
+     max-width: 300px;
 }
 </style>
 <div id="main">
