@@ -27,7 +27,7 @@ $database->MySQLDB();
 ?>
 <style>
 #uploader {
-     max-width: 500px;
+     max-width: 600px;
   margin-left: auto ;
   margin-right: auto ;
 }
@@ -37,7 +37,7 @@ $database->MySQLDB();
 <div id="top">	
 <?php    
 
-
+print_r($_POST);
 if(isset($_POST['hashtag'])){ //check if form was submitted
 
 
@@ -341,39 +341,42 @@ while($row = mysql_fetch_array($sql)) {
 				
 					
 	
-			
-						
-						
-						
-
-						var uploader = $('#uploader').pluploadQueue();
-	
-						if (uploader.files.length > 0) {
-							uploader.bind('StateChanged', function() {
-								if (uploader.files.length === (uploader.total.uploaded + uploader.total.failed)) {
-									$('form')[0].submit();
-								}
-							});
-								
-							uploader.start();
-
-							$("#btn-submit").hide();
-							$(".message_uploading").fadeIn();
-							
-							uploader.bind('FileUploaded', function (up, file, info) {
-								var obj = JSON.parse(info.response);
-								var new_file_field = '<input type="hidden" name="finished_files[]" value="'+obj.NewFileName+'" />'
-								$('form').append(new_file_field);
-							});
-		
-							return false;
-						} else {
-							alert('<?php _e("You must select at least one file to upload.",'cftp_admin'); ?>');
+						if (document.getElementById("btn-submit").value = 'Download'){
+						var new_file_field = '<input type="hidden" name="type" value="download" />'
+									$('form').append(new_file_field);
 						}
-				
-						return false;
-					
+						else
+						{
 						
+
+							var uploader = $('#uploader').pluploadQueue();
+		
+							if (uploader.files.length > 0) {
+								uploader.bind('StateChanged', function() {
+									if (uploader.files.length === (uploader.total.uploaded + uploader.total.failed)) {
+										$('form')[0].submit();
+									}
+								});
+									
+								uploader.start();
+
+								$("#btn-submit").hide();
+								$(".message_uploading").fadeIn();
+								
+								uploader.bind('FileUploaded', function (up, file, info) {
+									var obj = JSON.parse(info.response);
+									var new_file_field = '<input type="hidden" name="finished_files[]" value="'+obj.NewFileName+'" />'
+									$('form').append(new_file_field);
+								});
+			
+								return false;
+							} else {
+								alert('<?php _e("You must select at least one file to upload.",'cftp_admin'); ?>');
+							}
+					
+							return false;
+					
+						}
 					});
 				});
 			</script>
@@ -383,6 +386,7 @@ while($row = mysql_fetch_array($sql)) {
 						<div style = "text-align: center">
 						<h3>Hashtag</h3>
 				<input type="text" name="hashtag" id="hashtag2"  value="" />
+				<input type="text" name="field_type" id="field_type"  value="" />
 				</div>
 				
 				<input type="hidden" name="uploaded_files" id="uploaded_files" value="" />
