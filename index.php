@@ -37,7 +37,7 @@ $database->MySQLDB();
 <div id="top">	
 <?php    
 
-print_r($_POST);
+
 if(isset($_POST['hashtag'])){ //check if form was submitted
 
 
