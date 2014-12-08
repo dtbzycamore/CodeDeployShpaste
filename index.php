@@ -509,7 +509,7 @@ while($row = mysql_fetch_array($sql)) {
 							return false;
 					}
 					else{
-					alert("download");
+					
 					}
 						
 					});
