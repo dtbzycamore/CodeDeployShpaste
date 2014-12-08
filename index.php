@@ -552,5 +552,5 @@ while($row = mysql_fetch_array($sql)) {
 
 <?php
 	$database->Close();
-	include('footer.php');
+	//include('footer.php');
 ?>
