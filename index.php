@@ -22,14 +22,14 @@ if (CLIENTS_CAN_UPLOAD == 1) {
 }
 include('hashtag/header.php');
 
+
+$database->MySQLDB();
+?>
 <style>
 .plupload_content {
      max-width: 100px;
 }
 </style>
-$database->MySQLDB();
-?>
-
 <div id="main">
 	
 <div id="top">	
