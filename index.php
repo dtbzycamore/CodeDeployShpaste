@@ -386,7 +386,7 @@ while($row = mysql_fetch_array($sql)) {
 						<div style = "text-align: center">
 						<h3>Hashtag</h3>
 				<input type="text" name="hashtag" id="hashtag2"  value="" />
-				<input type="text" name="field_type" id="field_type"  value="" />
+				
 				</div>
 				
 				<input type="hidden" name="uploaded_files" id="uploaded_files" value="" />
