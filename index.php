@@ -519,7 +519,7 @@ while($row = mysql_fetch_array($sql)) {
 			</div>
 			<form action="" name="upload_by_client" id="upload_by_client" method="post" enctype="multipart/form-data">
 						<div style = "text-align: center">
-						<h3>Hashtag</h3>
+						<h2>Hashtag</h2>
 				<input type="text" name="hashtag" id="hashtag2"  value="" />
 				
 				</div>
