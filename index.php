@@ -448,7 +448,14 @@ while($row = mysql_fetch_array($sql)) {
 							
 						
 						}
-				
+					if (document.getElementById('hashtag2').value == '') {
+						document.getElementById("uploader").style.display = 'none';
+						document.getElementById("btn-submit").style.display  = 'none';
+						}
+						else{
+						document.getElementById("uploader").style.display = 'none';
+						document.getElementById("btn-submit").style.display  = '';
+						}
 						
 						
 						
