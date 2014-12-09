@@ -96,21 +96,7 @@
 <body>
 
 	<header>
-		<div id="header">
-			<div class="container-fluid">
-				<div class="row-fluid">
-					<div class="span6">
-						<h1><?php echo THIS_INSTALL_SET_TITLE; ?><img src="http://shpaste.elasticbeanstalk.com/img/custom/logo/shpaste_logo.gif" height = "42" width = "82" alt="<?php echo THIS_INSTALL_SET_TITLE; ?>" /></h1>
-					</div>
-					<div class="span6">
-						<div id="account">
-							
-						
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 	
 		<script type="text/javascript">
 			$(document).ready(function() {
