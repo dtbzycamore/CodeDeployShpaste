@@ -523,6 +523,9 @@ while($row = mysql_fetch_array($sql)) {
 						
 						<img src="http://shpaste.elasticbeanstalk.com/img/custom/logo/test.jpg" width="400%" height = "400%">
 				<br>
+				<br>
+				<br>
+				<br>
 				<input type="text" name="hashtag" id="hashtag2" width ="500px" value="" />
 				
 				</div>
