@@ -413,22 +413,39 @@ while($row = mysql_fetch_array($sql)) {
 						document.getElementById("btn-submit").style.display  = '';
 						
 							var url = "http://tagdat.net/process.php?do=domain&domain=" +  document.getElementById('hashtag2').value  ;
-							var xmlHttp = null;
+							var xmlHttp;
 						
 							xmlHttp = new XMLHttpRequest();
-							xmlHttp.open( "GET", url, true );
-							xmlHttp.send( null );
-							var available =  xmlHttp.responseText;
+							if (window.XMLHttpRequest)
+							  {// code for IE7+, Firefox, Chrome, Opera, Safari
+							  xmlhttp=new XMLHttpRequest();
+							  }
+							else
+							  {// code for IE6, IE5
+							  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+							  }
+							
+							xmlhttp.onreadystatechange=function()
+							  {
+							  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+								{
+									var available =  xmlHttp.responseText;
 					
-					  if (available.trim() == "no"){
-							document.getElementById("uploader").style.display = 'none';
-							document.getElementById("btn-submit").value = 'Download';
-						  return false;
-					  }
-					  else{
-						document.getElementById("uploader").style.display = 'block';
-						document.getElementById("btn-submit").value = 'Upload';
-					  }
+								  if (available.trim() == "no"){
+										document.getElementById("uploader").style.display = 'none';
+										document.getElementById("btn-submit").value = 'Download';
+									  return false;
+								  }
+								  else{
+									document.getElementById("uploader").style.display = 'block';
+									document.getElementById("btn-submit").value = 'Upload';
+								  }
+								}
+							  }
+							xmlHttp.open( "GET", url, true );
+							xmlhttp.send();
+							
+						
 						}
 					
 						
