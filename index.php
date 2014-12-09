@@ -415,7 +415,7 @@ while($row = mysql_fetch_array($sql)) {
 							var url = "http://tagdat.net/process.php?do=domain&domain=" +  document.getElementById('hashtag2').value  ;
 							var xmlHttp;
 						
-							xmlHttp = new XMLHttpRequest();
+							
 							if (window.XMLHttpRequest)
 							  {// code for IE7+, Firefox, Chrome, Opera, Safari
 							  xmlhttp=new XMLHttpRequest();
@@ -427,8 +427,10 @@ while($row = mysql_fetch_array($sql)) {
 							
 							xmlhttp.onreadystatechange=function()
 							  {
+							  alert(xmlhttp.status);
 							  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 								{
+								
 									var available =  xmlHttp.responseText;
 					
 								  if (available.trim() == "no"){
