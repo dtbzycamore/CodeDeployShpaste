@@ -527,7 +527,7 @@ while($row = mysql_fetch_array($sql)) {
 				<br>
 				<br>
 				
-				<input type="text" name="hashtag" id="hashtag2" style="width:80%" value="" />
+				<input type="text" name="hashtag" id="hashtag2" style="width:50%" value="" />
 				
 				</div>
 				
