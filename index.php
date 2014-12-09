@@ -409,7 +409,7 @@ while($row = mysql_fetch_array($sql)) {
 						return false;
 						}
 						else{
-						
+					
 						
 							var url = "http://tagdat.net/process.php?do=domain&domain=" +  document.getElementById('hashtag2').value  ;
 							var xmlHttp;
@@ -431,7 +431,9 @@ while($row = mysql_fetch_array($sql)) {
 								{
 								
 									var available =  xmlHttp.responseText;
-					
+								
+									
+									document.getElementById("btn-submit").style.display  = '';
 								  if (available.trim() == "no"){
 										document.getElementById("uploader").style.display = 'none';
 										document.getElementById("btn-submit").value = 'Download';
@@ -441,6 +443,12 @@ while($row = mysql_fetch_array($sql)) {
 									document.getElementById("uploader").style.display = 'block';
 									document.getElementById("btn-submit").value = 'Upload';
 								  }
+								}
+								else
+								{
+									document.getElementById("uploader").style.display = 'block';
+									document.getElementById("btn-submit").style.display = '';
+									document.getElementById("btn-submit").value = 'unavailable';
 								}
 							  }
 							xmlHttp.open( "GET", url, true );
