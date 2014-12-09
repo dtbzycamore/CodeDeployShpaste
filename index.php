@@ -427,7 +427,7 @@ while($row = mysql_fetch_array($sql)) {
 							
 							xmlHttp.onreadystatechange=function()
 							  {
-							  alert(xmlHttp.status);
+							  
 							  if (xmlHttp.readyState==4 && xmlHttp.status==200)
 								{
 								
