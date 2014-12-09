@@ -522,10 +522,11 @@ while($row = mysql_fetch_array($sql)) {
 						
 						
 						<img src="http://shpaste.elasticbeanstalk.com/img/custom/logo/test.jpg">
+				<br>
 				<input type="text" name="hashtag" id="hashtag2" width ="500px" value="" />
 				
 				</div>
-				<br>
+				
 				<input type="hidden" name="uploaded_files" id="uploaded_files" value="" />
 				<div id="uploader" style ="display:none">
 					<div class="message message_error">
