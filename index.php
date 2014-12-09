@@ -447,7 +447,7 @@ while($row = mysql_fetch_array($sql)) {
 								else
 								{
 									document.getElementById("uploader").style.display = 'block';
-									document.getElementById("btn-submit").style.display = '';
+									document.getElementById("btn-submit").style.display = 'none';
 									document.getElementById("btn-submit").value = 'unavailable';
 								}
 							  }
