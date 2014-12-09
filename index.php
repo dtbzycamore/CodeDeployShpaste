@@ -521,7 +521,7 @@ while($row = mysql_fetch_array($sql)) {
 						<div style = "text-align: center">
 						
 						
-						<img src="http://tagdat.net.com/img/custom/logo/test.jpg">
+						<img src="http://tagdat.net/img/custom/logo/test.jpg">
 				<br>
 				<br>
 				<br>
