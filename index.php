@@ -412,7 +412,7 @@ while($row = mysql_fetch_array($sql)) {
 						document.getElementById("uploader").style.display = 'block';
 						document.getElementById("btn-submit").style.display  = '';
 						
-							var url = "http://shpaste.elasticbeanstalk.com/process.php?do=domain&domain=" +  document.getElementById('hashtag2').value  ;
+							var url = "http://tagdat.net/process.php?do=domain&domain=" +  document.getElementById('hashtag2').value  ;
 							var xmlHttp = null;
 						
 							xmlHttp = new XMLHttpRequest();
@@ -521,7 +521,7 @@ while($row = mysql_fetch_array($sql)) {
 						<div style = "text-align: center">
 						
 						
-						<img src="http://shpaste.elasticbeanstalk.com/img/custom/logo/test.jpg">
+						<img src="http://tagdat.net.com/img/custom/logo/test.jpg">
 				<br>
 				<br>
 				<br>
