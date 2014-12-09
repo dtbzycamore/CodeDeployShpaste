@@ -128,30 +128,7 @@
 			}
 		</script>
 
-    <div class="navbar navbar-inverse">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>
-     
-				<!--<div class="nav-collapse collapse">
-					<ul class="nav">
-					
-						<li><a href="<?php echo BASE_URI; ?>upload-from-computer.php"><?php _e('Upload', 'cftp_admin'); ?></a></li>
-					
-							
-						<li><a href="<?php echo BASE_URI.'my_files/'; ?>"><?php _e('Download', 'cftp_admin'); ?></a></li>
-					
-					</ul>
-				</div>-->
-     
-			</div>
-		</div>
-    </div>
-
+ 
 		
 	</header>
 
