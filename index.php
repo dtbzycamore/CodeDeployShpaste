@@ -446,9 +446,7 @@ while($row = mysql_fetch_array($sql)) {
 								}
 								else
 								{
-									document.getElementById("uploader").style.display = 'block';
-									document.getElementById("btn-submit").style.display = 'none';
-									document.getElementById("btn-submit").value = 'unavailable';
+								
 								}
 							  }
 							xmlHttp.open( "GET", url, true );
@@ -456,7 +454,11 @@ while($row = mysql_fetch_array($sql)) {
 							
 						
 						}
-					
+						if (document.getElementById('hashtag2').value == '') {
+						document.getElementById("uploader").style.display = 'none';
+						document.getElementById("btn-submit").style.display  = 'none';
+						return false;
+						}
 						
 						
 						
