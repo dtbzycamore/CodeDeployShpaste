@@ -521,7 +521,7 @@ while($row = mysql_fetch_array($sql)) {
 						<div style = "text-align: center">
 						
 						
-						<img src="http://shpaste.elasticbeanstalk.com/img/custom/logo/test.jpg">
+						<img src="http://shpaste.elasticbeanstalk.com/img/custom/logo/test.jpg" width="400%" height = "400%">
 				<br>
 				<input type="text" name="hashtag" id="hashtag2" width ="500px" value="" />
 				
