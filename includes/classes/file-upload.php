@@ -113,7 +113,7 @@ class PSend_Upload_File
 		//$this->is_public = (!empty($arguments['public'])) ? '1' : '0';
 		
 		$this->expiry_date =  date("Y-m-d H:i:s", strtotime("+3 hours 30 minutes"));//date("Y-m-d");
-		echo $this->expiry_date;
+		
 		//$this->expiry_date->setTimezone(new DateTimeZone('America/Denver'));
 		
 		
