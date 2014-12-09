@@ -527,12 +527,8 @@ while($row = mysql_fetch_array($sql)) {
 				<br>
 				<br>
 				
-				<input type="text" name="hashtag" id="hashtag2" style="width:screensize()" value="" />
-				<script>function screensize()
-				{
-				return screen.width - 20;
-				}
-				</script>
+				<input type="text" name="hashtag" id="hashtag2" style="width:80%" value="" />
+				
 				</div>
 				
 				<input type="hidden" name="uploaded_files" id="uploaded_files" value="" />
