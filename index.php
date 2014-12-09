@@ -416,7 +416,7 @@ while($row = mysql_fetch_array($sql)) {
 							var xmlHttp = null;
 						
 							xmlHttp = new XMLHttpRequest();
-							xmlHttp.open( "GET", url, false );
+							xmlHttp.open( "GET", url, true );
 							xmlHttp.send( null );
 							var available =  xmlHttp.responseText;
 					
