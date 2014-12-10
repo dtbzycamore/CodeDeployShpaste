@@ -557,7 +557,7 @@ while($row = mysql_fetch_array($sql)) {
 				<br>
 				
 				<input type="text" name="hashtag" id="hashtag2" style="width:50%" value="" />
-					<input type="button" id="help_btn">?</button>
+					<input type="button" id="help_btn" value = "?"/>
 				</div>
 				
 				<input type="hidden" name="uploaded_files" id="uploaded_files" value="" />
