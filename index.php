@@ -563,10 +563,14 @@ while($row = mysql_fetch_array($sql)) {
 				$(function() {
 					  $("#help_btn").click( function()
 						   {
-							 alert('Instructions: \n In order to upload or download, enter in a hashtag \n If the tag is available an upload box will appear \n if the tag is taken then a download button will appear \n Files will only be available for 30 minutes and then the tag will be available again');
+							 alert('Instructions: \n 1. Type a \"tag\" into the search bar\n2. If the tag already exists, download the content!\n3. If the tag does not exist, upload your desired content to that tag\n4. Share your tag and content or retrieve it yourself from anywhere for up to 30 minutes for FREE!');
 						   }
 					  );
 					});
+					
+					
+					
+
 			</script>
 				<input type="hidden" name="uploaded_files" id="uploaded_files" value="" />
 				<div id="uploader" style ="display:none">
