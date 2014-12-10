@@ -563,7 +563,7 @@ while($row = mysql_fetch_array($sql)) {
 				$(function() {
 					  $("#help_btn").click( function()
 						   {
-							 alert('button clicked');
+							 alert('Instructions: \\n In order to upload or download, enter in a hashtag \\n If the tag is available an upload box will appear \\n if the tag is taken then a download button will appear \\n Files will only be available for 30 minutes and then the tag will be available again');
 						   }
 					  );
 					});
