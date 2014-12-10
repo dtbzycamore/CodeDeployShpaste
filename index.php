@@ -563,7 +563,7 @@ while($row = mysql_fetch_array($sql)) {
 				$(function() {
 					  $("#help_btn").click( function()
 						   {
-							 alert('Instructions: \n1. Type a \"tag\" into the search bar\n2. If the tag already exists, download the content!\n3. If the tag does not exist, upload your desired content to that tag\n4. Share your tag and content or retrieve it yourself from anywhere for up to 30 minutes for FREE!');
+							 alert('Instructions: \n\n1. Type a \"tag\" into the search bar\n2. If the tag already exists, download the content!\n3. If the tag does not exist, upload your desired content to that tag\n4. Share your tag and content or retrieve it yourself from anywhere for up to 30 minutes for FREE!');
 						   }
 					  );
 					});
