@@ -570,6 +570,7 @@ while($row = mysql_fetch_array($sql)) {
 				<div class="after_form_buttons" style = "text-align:center">
 					<!--<button type="submit" name="Submit" class="btn btn-wide btn-primary" id="btn-submit"><?php _e('Upload files','cftp_admin'); ?></button>-->
 					<input  type="submit" name="Submit" class="btn btn-wide btn-primary" id="btn-submit" value="Download" style = "text-align:center; display:none">
+					<button type="button" id="help_btn">?</button>
 				</div>
 				
 				
